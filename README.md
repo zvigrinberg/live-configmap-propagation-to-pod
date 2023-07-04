@@ -28,7 +28,7 @@ cm-propagation-test-784767d9c4-br4jk   1/1     Running   0          29s
 ```shell
 echo "values of configmaps mounted as enviornment variables:"
 
-oc exec $(oc get pod -l app=cm-propagation-test -o name) -- env | grep -E 'hello|key'
+oc exec $(oc get pod -l app=cm-propagation-test -o name) -- env | grep -E 'hello|key|newKey'
 ```
 Output:
 ```shell
